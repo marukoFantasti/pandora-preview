@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pandora Project | 続けるための仕組みがある、オンライン家庭教師</title>
+<meta name="description" content="「勉強しなさい」を、「今日もできた！」に。授業と課題が毎週つながるオンライン家庭教師。1回50分 5,500円（税込）、入会金・管理費なし。無料体験50分。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F4EC;--surface:#FFFFFF;--ink:#1E2733;--muted:#5B6470;--line:#DDD6C8;--pur:#6B4FC8;--deep:#4B3596;--purl:#A78BFA;--purbg:#EDE7FB;--rose:#CD4F7C;--rosebg:#F8E3EB;--navy:#1E2733;--gold:#F5B83D;--orange:#F08A4B}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2{margin:0;line-height:1.35;text-wrap:balance}
+h3{margin:0;line-height:1.4}
+.en{font-family:Outfit,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.band{padding-block:72px}
+.band.alt{background:var(--surface)}
+.band.pbg{background:var(--purbg)}
+.label{display:inline-block;font-family:Outfit,sans-serif;font-size:12px;letter-spacing:.16em;color:var(--pur);font-weight:800;margin-bottom:10px}
+h2{font-size:clamp(24px,3.2vw,34px);font-weight:700}
+.lead{margin:14px 0 0;max-width:38em;color:var(--muted)}
+/* header */
+header{position:sticky;top:0;z-index:5;background:rgba(30,39,51,.88);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:12px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+header .brand{color:#fff} header .brand small{color:var(--purl)}
+.brand svg{width:38px;height:38px}
+.brand b{font-family:Outfit,sans-serif;font-weight:800;letter-spacing:.06em;font-size:15px;line-height:1.1;display:block}
+.brand small{font-family:Outfit,sans-serif;font-weight:600;letter-spacing:.22em;font-size:10px;color:var(--pur);display:block}
+.btn{display:inline-block;background:var(--pur);color:#fff;font-weight:700;padding:13px 24px;border-radius:999px;text-decoration:none;font-size:15px;white-space:nowrap;box-shadow:0 8px 20px rgba(107,79,200,.22);transition:transform .15s,background .15s}
+.btn:hover{background:var(--deep);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--deep);border:2px solid var(--pur);box-shadow:none}
+.btn.white{background:#fff;color:var(--deep)}
+/* hero */
+.herowrap{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 85% 10%,#5B3FB8 0%,#3B2A7E 45%,#1E2733 100%);color:#fff}
+.herowrap::after{content:"";position:absolute;inset:auto -10% -40% -10%;height:60%;background:radial-gradient(50% 50% at 50% 50%,rgba(167,139,250,.25),transparent 70%);pointer-events:none}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding-block:72px 64px;position:relative;z-index:1}
+.hero .label{color:var(--purl)}
+.hero h1{font-size:clamp(30px,3.9vw,48px);font-weight:700;letter-spacing:.01em;color:#fff}
+.hero h1 .q{margin-left:-.5em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:17px;color:#EDE7FB}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
+.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+.hero .btn.ghost:hover{background:rgba(255,255,255,.1)}
+.hero .note{font-size:13px;color:#C9B8FF}
+.mvbox{display:grid;place-items:center}
+.herobox{width:min(100%,360px);height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))}
+.mvbox{align-self:center}
+.mv{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:22px}
+.mv svg{width:100%;height:auto;display:block}
+.mv .pill{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--pur);color:#fff;font-weight:700;font-size:13px;padding:5px 16px;border-radius:999px;white-space:nowrap;letter-spacing:.06em}
+/* pain */
+.pain{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.pain>div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px 22px}
+.pain p{margin:0;font-weight:700;font-size:18px}
+.pain small{display:block;color:var(--muted);margin-top:8px;font-size:14px;line-height:1.7}
+/* cycle */
+.cyc{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:32px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:36px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.steps .n{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-family:Outfit,sans-serif;font-weight:800;color:#fff;background:var(--pur)}
+.steps li.hq .n{background:var(--rosebg);color:var(--rose);border:1.5px solid var(--rose)}
+.steps h3{font-size:16px}
+.steps h3 small{font-weight:500;color:var(--muted);font-size:12px;margin-left:8px}
+.steps p{margin:4px 0 0;font-size:14px;color:var(--ink)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;font-size:14px}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:50%}
+.legend .c{background:var(--pur)} .legend .h{background:var(--rosebg);border:1.5px solid var(--rose)}
+
+/* cycle animation（CSSのみ。表示中だけ .play を付ける） */
+.cycsvg .arrow path{stroke-dasharray:1;stroke-dashoffset:0}
+.cycsvg .arrow polygon{opacity:1}
+.cycsvg .node{transition:transform .3s}
+.play .cycsvg .arrow path{animation:draw 6s linear infinite}
+.play .cycsvg .arrow polygon{animation:ah 6s linear infinite}
+.play .cycsvg .node{animation:pulse 6s ease-in-out infinite}
+.play .cycsvg .node .halo{animation:halo 6s ease-in-out infinite}
+.play .steps li{animation:hi 6s ease-in-out infinite}
+.cycsvg .n1,.cycsvg .n1 .halo,.steps li:nth-child(1){animation-delay:0s!important}
+.cycsvg .n2,.cycsvg .n2 .halo,.steps li:nth-child(2){animation-delay:1s!important}
+.cycsvg .n3,.cycsvg .n3 .halo,.steps li:nth-child(3){animation-delay:2s!important}
+.cycsvg .n4,.cycsvg .n4 .halo,.steps li:nth-child(4){animation-delay:3s!important}
+.cycsvg .n5,.cycsvg .n5 .halo,.steps li:nth-child(5){animation-delay:4s!important}
+.cycsvg .n6,.cycsvg .n6 .halo,.steps li:nth-child(6){animation-delay:5s!important}
+.cycsvg .a1 path,.cycsvg .a1 polygon{animation-delay:.45s!important}
+.cycsvg .a2 path,.cycsvg .a2 polygon{animation-delay:1.45s!important}
+.cycsvg .a3 path,.cycsvg .a3 polygon{animation-delay:2.45s!important}
+.cycsvg .a4 path,.cycsvg .a4 polygon{animation-delay:3.45s!important}
+.cycsvg .a5 path,.cycsvg .a5 polygon{animation-delay:4.45s!important}
+.cycsvg .a6 path,.cycsvg .a6 polygon{animation-delay:5.45s!important}
+@keyframes pulse{0%,8%{transform:scale(1)}3%{transform:scale(1.1)}}
+@keyframes halo{0%,8%,100%{opacity:0}3%{opacity:.28}}
+@keyframes draw{0%{stroke-dashoffset:1}6%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@keyframes ah{0%,5%{opacity:0}7%,100%{opacity:1}}
+@keyframes hi{0%,12%,100%{border-color:var(--line);background:var(--surface)}4%{border-color:var(--pur);background:var(--purbg)}}
+@media (prefers-reduced-motion:reduce){.play .cycsvg *,.play .steps li{animation:none!important}}
+
+/* task concept */
+.dark{background:var(--navy);color:#F1EEE6}
+.dark h2{color:#fff} .dark .label{color:var(--purl)}
+.dark .lead{color:#D8D3C8}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.grid3>div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:22px}
+.grid3 h3{color:#fff;font-size:18px} .grid3 p{margin:8px 0 0;font-size:15px;color:#D8D3C8}
+.grid3 .big{font-family:Outfit,sans-serif;font-weight:800;font-size:34px;color:var(--purl);line-height:1}
+/* support */
+.sup{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}
+.sup .item{display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
+.sup .ic{width:56px;height:56px;border-radius:50%;background:var(--purbg);display:grid;place-items:center}
+.sup .ic svg{width:28px;height:28px;stroke:var(--pur);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sup h3{font-size:19px;color:var(--deep)} .sup p{margin:6px 0 0;font-size:15px}
+/* promises */
+.prom{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.prom>div{border-left:4px solid var(--pur);padding:4px 0 4px 18px}
+.prom h3{font-size:18px;color:var(--deep)} .prom p{margin:6px 0 0;font-size:15px}
+/* price */
+.price{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;margin-top:30px;align-items:stretch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px}
+.card.navy{background:var(--navy);color:#fff;border:0}
+.amount{font-family:Outfit,sans-serif;font-size:56px;font-weight:800;line-height:1;letter-spacing:-.01em}
+.amount small{font-family:"Noto Sans JP",sans-serif;font-size:16px;font-weight:500;margin-left:6px}
+.card.navy .k{color:var(--purl);font-weight:700;font-size:15px}
+.card ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.card li{padding-left:22px;position:relative;font-size:15px}
+.card li::before{content:"";position:absolute;left:0;top:.65em;width:10px;height:10px;border-radius:50%;background:var(--purl)}
+.card.trial{border:2px solid var(--pur);position:relative}
+.card.trial .badge{position:absolute;top:-14px;left:24px;background:var(--pur);color:#fff;font-weight:700;padding:4px 14px;border-radius:999px;font-size:13px}
+.card.trial h3{font-size:24px;color:var(--deep)}
+.info{margin-top:24px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:8px 24px}
+.info dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:15px;padding-block:14px}
+.info dt{background:var(--purbg);color:var(--deep);font-weight:700;font-size:13px;border-radius:6px;padding:2px 10px;height:fit-content;white-space:nowrap}
+.info dd{margin:0}
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.flow>div{background:var(--purbg);border-radius:16px;padding:22px}
+.flow>div:last-child{background:var(--pur);color:#fff}
+.flow .n{font-family:Outfit,sans-serif;font-weight:800;font-size:22px;color:var(--pur)}
+.flow>div:last-child .n{color:#EDE7FB}
+.flow h3{font-size:18px;margin-top:4px} .flow p{margin:6px 0 0;font-size:14px}
+/* video */
+.video{margin-top:30px;border-radius:20px;overflow:hidden;background:#000;aspect-ratio:16/9}
+.video iframe{width:100%;height:100%;border:0;display:block}
+/* cta */
+.ctaband{background:var(--deep);color:#fff;text-align:center}
+.ctaband h2{color:#fff} .ctaband .label{color:var(--purl)} .ctaband p{margin:12px auto 0;opacity:.9;max-width:36em}
+.ctaband .cta{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer{padding-block:28px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center}
+@media (max-width:860px){
+  .hero,.cyc,.price{grid-template-columns:1fr;gap:28px} .hero{padding-block:44px 48px} .herobox{width:min(78%,320px)} .mvbox{order:-1}
+  .pain,.grid3,.sup,.prom,.flow{grid-template-columns:1fr}
+  .band{padding-block:52px} header .btn{padding:10px 16px;font-size:14px}
+  .amount{font-size:46px}
+}
+a:focus-visible{outline:3px solid var(--purl);outline-offset:3px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="#top"><svg viewBox="-118 -118 236 248" aria-hidden="true"><polygon points="-0.0,-111.3 110.3,-56.1 0.0,-1.0 -110.3,-56.1" fill="#8F78E6"/><polygon points="-110.3,-56.1 0.0,-1.0 0.0,123.3 -110.3,68.1" fill="#6350ac"/><g transform="matrix(1.1031,0.5515,0,1.3510,-110.31,-56.15)"><text x="50" y="75" font-family="Outfit,sans-serif" font-size="82" font-weight="800" fill="#fff" text-anchor="middle">P</text></g><polygon points="0.0,-1.0 110.3,-56.1 110.3,68.1 0.0,123.3" fill="#463686"/></svg><span><b>PANDORA</b><small>PROJECT</small></span></a>
+  <a class="btn" href="FORM_URL">無料体験を申し込む</a>
+</div></header>
+
+<section class="herowrap" id="top"><div class="wrap hero">
+  <div>
+    <span class="label">ONLINE TUTORING</span>
+    <h1><span class="q">「</span>勉強しなさい」を、<br><span class="q">「</span><em>今日もできた！</em>」に。</h1>
+    <p class="lead">学校の授業をもっと理解したい。集団の塾は、時間や場所が合わせにくい。学校をお休みしている。そんなお子さんのための、オンライン家庭教師です。</p>
+    <div class="cta"><a class="btn white" href="FORM_URL">無料体験（50分）を申し込む</a><a class="btn ghost" href="#cycle">仕組みを見る</a></div>
+    <p class="note">入会金なし・管理費なし・いつでも退会できます</p>
+  </div>
+  <div class="mvbox"><svg class="herobox" id="herobox" viewBox="-170 -250 340 380" aria-hidden="true"><defs><radialGradient id="hglow"><stop offset="0" stop-color="#F3ECFF" stop-opacity=".95"/><stop offset=".45" stop-color="#A78BFA" stop-opacity=".45"/><stop offset="1" stop-color="#A78BFA" stop-opacity="0"/></radialGradient></defs><circle id="hflash" cx="0" cy="-60" r="190" fill="url(#hglow)" opacity="0"/><ellipse id="hshadow" cx="0" cy="118" rx="120" ry="18" fill="#000" opacity=".25"/><g id="hmove"><g id="hb"></g></g><g id="hstars"></g></svg></div>
+</div></section>
+
+<section class="band alt"><div class="wrap">
+  <span class="label">FOR</span>
+  <h2>こんなお子さんに。</h2>
+  <div class="pain">
+    <div><p>学校の授業を、もっと理解したい</p><small>分からないところまで戻って、分かるまで。学年を戻ってやり直すこともできます。</small></div>
+    <div><p>集団の塾は、時間や場所が合わせにくい</p><small>オンラインでご自宅から。曜日と時間は、ご相談のうえ決めます。</small></div>
+    <div><p>学校をお休みしている</p><small>学びは止めなくていい。急がせず、「今日もできた」を積み重ねます。</small></div>
+  </div>
+</div></section>
+
+<section class="band" id="cycle"><div class="wrap">
+  <span class="label">HOW IT WORKS</span>
+  <h2>続けるための仕組み。授業と課題が、毎週つながる。</h2>
+  <p class="lead">授業で「できた・できなかった」を記録し、その子のためだけの課題をつくって届けます。課題の結果から、次の授業で取り戻すポイントを決める。この繰り返しだから、つまずきを翌週に持ち越しません。</p>
+  <div class="cyc">
+    <div>
+      <div class="mv"><span class="pill">毎週のサイクル</span><svg class="cycsvg" xmlns="http://www.w3.org/2000/svg" viewBox="3 3 114 114" role="img" aria-label="毎週のサイクル図"><g class="arrow a1"><path pathLength="1" d="M75.03,27.29 A36,36 0 0,1 77.22,28.39" stroke="#A78BFA" stroke-width="1.3" fill="none" stroke-linecap="round"/><polygon points="79.16,29.52 77.46,26.21 75.44,29.43" fill="#A78BFA"/></g><g class="arrow a2"><path pathLength="1" d="M95.84,56.66 A36,36 0 0,1 95.99,59.11" stroke="#A78BFA" stroke-width="1.3" fill="none" stroke-linecap="round"/><polygon points="95.97,61.35 97.99,58.22 94.20,58.08" fill="#A78BFA"/></g><g class="arrow a3"><path pathLength="1" d="M80.82,89.37 A36,36 0 0,1 78.77,90.72" stroke="#A78BFA" stroke-width="1.3" fill="none" stroke-linecap="round"/><polygon points="76.82,91.83 80.54,92.01 78.76,88.65" fill="#A78BFA"/></g><g class="arrow a4"><path pathLength="1" d="M44.97,92.71 A36,36 0 0,1 42.78,91.61" stroke="#A78BFA" stroke-width="1.3" fill="none" stroke-linecap="round"/><polygon points="40.84,90.48 42.54,93.79 44.56,90.57" fill="#A78BFA"/></g><g class="arrow a5"><path pathLength="1" d="M24.16,63.34 A36,36 0 0,1 24.01,60.89" stroke="#A78BFA" stroke-width="1.3" fill="none" stroke-linecap="round"/><polygon points="24.03,58.65 22.01,61.78 25.80,61.92" fill="#A78BFA"/></g><g class="arrow a6"><path pathLength="1" d="M39.18,30.63 A36,36 0 0,1 41.23,29.28" stroke="#A78BFA" stroke-width="1.3" fill="none" stroke-linecap="round"/><polygon points="43.18,28.17 39.46,27.99 41.24,31.35" fill="#A78BFA"/></g><g class="node n1 ch" style="transform-origin:60.00px 24.00px"><circle class="halo" cx="60.00" cy="24.00" r="15.5" fill="#6B4FC8" opacity="0"/><circle cx="60.00" cy="24.00" r="12.5" fill="#6B4FC8" stroke="#6B4FC8" stroke-width="0.7"/><text x="60.00" y="25.66" font-size="4.6" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">授業</text><text x="60.00" y="15.00" font-size="2.6" font-weight="700" fill="#EDE7FB" text-anchor="middle" font-family="Outfit,sans-serif">1</text></g><g class="node n2 hq" style="transform-origin:91.18px 42.00px"><circle class="halo" cx="91.18" cy="42.00" r="15.5" fill="#CD4F7C" opacity="0"/><circle cx="91.18" cy="42.00" r="12.5" fill="#F8E3EB" stroke="#CD4F7C" stroke-width="0.6"/><text x="91.18" y="41.12" font-size="3.4" font-weight="700" fill="#1E2733" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">授業の</text><text x="91.18" y="45.20" font-size="3.4" font-weight="700" fill="#1E2733" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">振り返り</text><text x="91.18" y="33.00" font-size="2.6" font-weight="700" fill="#CD4F7C" text-anchor="middle" font-family="Outfit,sans-serif">2</text></g><g class="node n3 hq" style="transform-origin:91.18px 78.00px"><circle class="halo" cx="91.18" cy="78.00" r="15.5" fill="#CD4F7C" opacity="0"/><circle cx="91.18" cy="78.00" r="12.5" fill="#F8E3EB" stroke="#CD4F7C" stroke-width="0.6"/><text x="91.18" y="75.36" font-size="3.0" font-weight="700" fill="#1E2733" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">課題への</text><text x="91.18" y="78.96" font-size="3.0" font-weight="700" fill="#1E2733" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">フィード</text><text x="91.18" y="82.56" font-size="3.0" font-weight="700" fill="#1E2733" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">バック</text><text x="91.18" y="69.00" font-size="2.6" font-weight="700" fill="#CD4F7C" text-anchor="middle" font-family="Outfit,sans-serif">3</text></g><g class="node n4 ch" style="transform-origin:60.00px 96.00px"><circle class="halo" cx="60.00" cy="96.00" r="15.5" fill="#6B4FC8" opacity="0"/><circle cx="60.00" cy="96.00" r="12.5" fill="#6B4FC8" stroke="#6B4FC8" stroke-width="0.7"/><text x="60.00" y="97.66" font-size="4.6" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">課題</text><text x="60.00" y="87.00" font-size="2.6" font-weight="700" fill="#EDE7FB" text-anchor="middle" font-family="Outfit,sans-serif">4</text></g><g class="node n5 hq" style="transform-origin:28.82px 78.00px"><circle class="halo" cx="28.82" cy="78.00" r="15.5" fill="#CD4F7C" opacity="0"/><circle cx="28.82" cy="78.00" r="12.5" fill="#F8E3EB" stroke="#CD4F7C" stroke-width="0.6"/><text x="28.82" y="77.12" font-size="3.4" font-weight="700" fill="#1E2733" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">課題の</text><text x="28.82" y="81.20" font-size="3.4" font-weight="700" fill="#1E2733" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">振り返り</text><text x="28.82" y="69.00" font-size="2.6" font-weight="700" fill="#CD4F7C" text-anchor="middle" font-family="Outfit,sans-serif">5</text></g><g class="node n6 hq" style="transform-origin:28.82px 42.00px"><circle class="halo" cx="28.82" cy="42.00" r="15.5" fill="#CD4F7C" opacity="0"/><circle cx="28.82" cy="42.00" r="12.5" fill="#F8E3EB" stroke="#CD4F7C" stroke-width="0.6"/><text x="28.82" y="39.36" font-size="3.0" font-weight="700" fill="#1E2733" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">授業への</text><text x="28.82" y="42.96" font-size="3.0" font-weight="700" fill="#1E2733" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">フィード</text><text x="28.82" y="46.56" font-size="3.0" font-weight="700" fill="#1E2733" text-anchor="middle" font-family="'Noto Sans JP',sans-serif">バック</text><text x="28.82" y="33.00" font-size="2.6" font-weight="700" fill="#CD4F7C" text-anchor="middle" font-family="Outfit,sans-serif">6</text></g><g transform="translate(60,64) scale(0.0667)"><polygon points="-0.0,-111.3 110.3,-56.1 0.0,-1.0 -110.3,-56.1" fill="#2E2066"/><polygon points="-0.0,-100.3 88.2,-56.1 0.0,-12.0 -88.2,-56.1" fill="#F3ECFF" opacity="1.00"/><polygon points="-110.3,-56.1 0.0,-1.0 0.0,123.3 -110.3,68.1" fill="#6350ac" stroke="#6350ac" stroke-width="0.6" stroke-linejoin="round"/><g transform="matrix(1.1031,0.5515,0.0000,1.3510,-110.31,-56.15)"><text x="50" y="75.0" font-family="Outfit,sans-serif" font-size="82" font-weight="800" fill="#fff" text-anchor="middle">P</text></g><polygon points="0.0,-1.0 110.3,-56.1 110.3,68.1 0.0,123.3" fill="#463686" stroke="#463686" stroke-width="0.6" stroke-linejoin="round"/><polygon points="-0.0,-171.3 110.3,-116.1 0.0,-61.0 -110.3,-116.1" fill="#8F78E6" stroke="#8F78E6" stroke-width="0.6" stroke-linejoin="round" transform="rotate(-12.00 -110.3 -116.1)"/></g><polygon points="52.5,48.6 53.0,49.8 54.3,49.9 53.3,50.8 53.6,52.0 52.5,51.4 51.4,52.0 51.7,50.8 50.7,49.9 52.0,49.8" fill="#F5B83D" opacity="1.000"/><polygon points="60.5,43.9 61.2,45.6 63.0,45.7 61.6,46.9 62.0,48.6 60.5,47.7 59.0,48.6 59.4,46.9 58.0,45.7 59.8,45.6" fill="#F5B83D" opacity="1.000"/><polygon points="68.5,49.9 68.9,50.9 70.0,51.0 69.2,51.7 69.4,52.8 68.5,52.2 67.6,52.8 67.8,51.7 67.0,51.0 68.1,50.9" fill="#F08A4B" opacity="1.000"/></svg></div>
+      <div class="legend"><span><i class="c"></i>お子さんが取り組む：授業・課題</span><span><i class="h"></i>学習指導本部が支える：振り返りと次の準備</span></div>
+    </div>
+    <ol class="steps"><li class="ch"><span class="n">1</span><div><h3>授業 <small>先生と生徒</small></h3><p>好きなことを題材にした授業。できた・できなかったを、その場で記録します。</p></div></li><li class="hq"><span class="n">2</span><div><h3>授業の振り返り <small>学習指導本部</small></h3><p>授業の記録をもとに、次に学ぶべきことを見極めます。授業のまとめは毎回保護者の方へ。</p></div></li><li class="hq"><span class="n">3</span><div><h3>課題へのフィードバック <small>学習指導本部</small></h3><p>その子だけのオリジナル問題を、毎回つくります。難易度だけでなく、テーマも「好き」に。</p></div></li><li class="ch"><span class="n">4</span><div><h3>課題 <small>生徒</small></h3><p>課題はスマホに届きます。1回5分。ご希望なら毎日でも、その子のペースで。</p></div></li><li class="hq"><span class="n">5</span><div><h3>課題の振り返り <small>学習指導本部</small></h3><p>先生の採点と課題の結果をもとに、次の課題と授業で取り戻すポイントを決めます。</p></div></li><li class="hq"><span class="n">6</span><div><h3>授業へのフィードバック <small>学習指導本部・先生</small></h3><p>課題で取り戻せなかったところは、授業で。よく間違える所は記録して、定期的に反復します。</p></div></li></ol>
+  </div>
+</div></section>
+
+<section class="band dark"><div class="wrap">
+  <span class="label">ORIGINAL TASKS</span>
+  <h2>課題は、配る宿題ではありません。<br>その子のために、毎回つくって届けます。</h2>
+  <p class="lead">授業の進度、課題の結果、そしてその子の「好き」。その3つから、弊社独自のシステムで毎回問題をつくります。だから、次の課題が待ち遠しくなります。</p>
+  <div class="grid3">
+    <div><div class="big">毎回</div><h3>その子専用の問題</h3><p>難易度だけでなく、テーマもその子に合わせます。同じ単元でも、サッカー好きにはサッカーの問題を。</p></div>
+    <div><div class="big">5分</div><h3>スマホに届く</h3><p>1回5分。スマホひとつで、どこでも。ご希望なら毎日でも、週に数回でも、その子のペースで。</p></div>
+    <div><div class="big">翌週</div><h3>つまずきを持ち越さない</h3><p>先生が採点し、つまずきは次の課題で取り戻します。それでも難しければ、授業で。</p></div>
+  </div>
+</div></section>
+
+<section class="band alt" id="support"><div class="wrap">
+  <span class="label">SUPPORT</span>
+  <h2>続けるための、5つのサポート。</h2>
+  <p class="lead">「続けられる」を、仕組みでつくります。</p>
+  <div class="sup"><div class="item"><div class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></div><div><h3>ご希望なら、毎日でも</h3><p>課題はスマホに届きます。1回5分。毎日でも、週に数回でも、その子のペースで続けられます。</p></div></div><div class="item"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></div><div><h3>次に学ぶことを、見極める</h3><p>授業の進度と課題の結果から、その子だけの問題を毎回つくります。何を学ぶべきかで迷わせません。</p></div></div><div class="item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg></div><div><h3>次の課題が、待ち遠しい</h3><p>難易度だけでなく、テーマもその子の「好き」に合わせます。サッカーが好きならサッカーの問題に。</p></div></div><div class="item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></div><div><h3>間違いを、そのままにしない</h3><p>先生が採点し、つまずきは次の課題で取り戻します。それでも難しければ授業で。よく間違える所は記録して、定期的に反復します。</p></div></div><div class="item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4M9 11h6M9 14.5h6M9 18h4"/></svg></div><div><h3>授業のまとめを、毎回</h3><p>授業の内容とつまずきを、毎回まとめて保護者の方へお渡しします。何を学んだかが分かります。</p></div></div></div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <span class="label">OUR PROMISE</span>
+  <h2>3つの約束。</h2>
+  <div class="prom">
+    <div><h3>「好き」から始めます</h3><p>サッカー、動物、乗り物。お子さんの好きなことが教材です。</p></div>
+    <div><h3>急がせません</h3><p>テストのための勉強ではありません。「今日もできた」を積み重ねて、学ぶことを嫌いにさせません。</p></div>
+    <div><h3>つまずきに合わせます</h3><p>学年を戻ってやり直せます。問題は少なめにもできます。その子に合う進め方を一緒に探します。</p></div>
+  </div>
+</div></section>
+
+<section class="band pbg" id="price"><div class="wrap">
+  <span class="label">PRICE</span>
+  <h2>シンプルな料金。中身で勝負します。</h2>
+  <div class="price">
+    <div class="card navy">
+      <div class="k">1回50分</div>
+      <div class="amount">5,500<small>円（税込）</small></div>
+      <ul><li>入会金なし</li><li>管理費なし</li><li>いつでも退会できます</li><li>週1回から。回数はご相談ください</li></ul>
+    </div>
+    <div class="card trial">
+      <span class="badge">まずはこちら</span>
+      <h3>無料体験 50分</h3>
+      <p style="margin:10px 0 0;font-size:15px">通常の授業と同じ50分を、まず一度。お子さんの様子を見て、合うかどうかを一緒に考えます。体験後の勧誘はしません。</p>
+      <p style="margin:18px 0 0"><a class="btn" href="FORM_URL">無料体験を申し込む</a></p>
+    </div>
+  </div>
+  <div class="info"><dl>
+    <dt>対象</dt><dd>小学生・中学生（高校生はご相談ください）</dd>
+    <dt>教科</dt><dd>算数・数学・国語・英語（理科・社会はご相談ください）</dd>
+    <dt>形式</dt><dd>オンライン。ご自宅から、スマホ・タブレット・PCで受けられます</dd>
+    <dt>時間</dt><dd>1回50分。曜日と時間はご相談のうえ決めます</dd>
+  </dl></div>
+</div></section>
+
+<section class="band alt" id="flow"><div class="wrap">
+  <span class="label">GETTING STARTED</span>
+  <h2>はじめ方は、3ステップ。</h2>
+  <div class="flow">
+    <div><div class="n">1</div><h3>無料体験</h3><p>フォームからお申し込み。50分の授業をまず一度。</p></div>
+    <div><div class="n">2</div><h3>ご相談</h3><p>お子さんに合う進め方・曜日・時間を一緒に決めます。</p></div>
+    <div><div class="n">3</div><h3>スタート</h3><p>週1回から。退会はいつでもできます。</p></div>
+  </div>
+  <div class="video" id="video" hidden><iframe src="" title="続けるための仕組み（1分）" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div></section>
+
+<section class="band ctaband" id="contact"><div class="wrap">
+  <span class="label">CONTACT</span>
+  <h2>まずは、無料体験から。</h2>
+  <p>お問い合わせも、無料体験のお申し込みも、同じフォームからどうぞ。2日以内にご連絡します。</p>
+  <div class="cta"><a class="btn white" href="FORM_URL">お問い合わせ・無料体験のお申し込み</a></div>
+</div></section>
+
+<footer><div class="wrap"><a class="brand" href="#top" style="gap:8px"><svg viewBox="-118 -118 236 248" aria-hidden="true"><polygon points="-0.0,-111.3 110.3,-56.1 0.0,-1.0 -110.3,-56.1" fill="#8F78E6"/><polygon points="-110.3,-56.1 0.0,-1.0 0.0,123.3 -110.3,68.1" fill="#6350ac"/><g transform="matrix(1.1031,0.5515,0,1.3510,-110.31,-56.15)"><text x="50" y="75" font-family="Outfit,sans-serif" font-size="82" font-weight="800" fill="#fff" text-anchor="middle">P</text></g><polygon points="0.0,-1.0 110.3,-56.1 110.3,68.1 0.0,123.3" fill="#463686"/></svg><span><b>PANDORA</b><small>PROJECT</small></span></a><span>© Pandora Project</span></div></footer>
+
+<script>
+/* ===== 設定：フォームと動画 ===== */
+const FORM_URL = "form/";          // フォームのURL（例: "https://xxx.pages.dev/form/" や "/form/"）
+const YOUTUBE_ID = "";             // 動画のYouTube ID（空なら動画欄は表示しない）
+document.querySelectorAll('a[href="FORM_URL"]').forEach(a=>a.href=FORM_URL);
+if(YOUTUBE_ID){const v=document.getElementById('video');v.hidden=false;v.querySelector('iframe').src=`https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}?rel=0`;}
+
+
+/* ===== ヒーローの箱：くるっと回って、パカッと開く（見えている間だけ描画） ===== */
+(function(){
+  const g=document.getElementById('hb'), gs=document.getElementById('hstars'), svg=document.getElementById('herobox'), mv=document.getElementById('hmove'), fl=document.getElementById('hflash'), sh=document.getElementById('hshadow'); if(!g) return;
+  const S=300, a=S*0.26, h=a*0.92, pitch=30*Math.PI/180, cp=Math.cos(pitch), sp=Math.sin(pitch);
+  const PUR="#6B4FC8", DD="#2E2066", L="#8F78E6", GLOW="#F3ECFF", GOLD="#F5B83D", ORANGE="#F08A4B";
+  const mix=(c1,c2,t)=>{const A=[1,3,5].map(i=>parseInt(c1.substr(i,2),16)),B=[1,3,5].map(i=>parseInt(c2.substr(i,2),16));return "#"+A.map((v,i)=>Math.round(v+(B[i]-v)*t).toString(16).padStart(2,"0")).join("");};
+  const light=(()=>{const v=[-0.45,0.75,0.5],n=Math.hypot(...v);return v.map(x=>x/n);})();
+  const ease=x=>{x=Math.max(0,Math.min(1,x));return 1-Math.pow(1-x,3);};
+  const back=x=>{x=Math.max(0,Math.min(1,x));const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2);};
+  function render(yawDeg,open){
+    const cy=Math.cos(yawDeg*Math.PI/180), sy=Math.sin(yawDeg*Math.PI/180);
+    const proj=(x,y,z)=>{const x1=x*cy+z*sy, z1=-x*sy+z*cy; return [x1, -(y*cp-z1*sp)+S*0.02, y*sp+z1*cp];};
+    const rotn=(nx,ny,nz)=>{const x1=nx*cy+nz*sy, z1=-nx*sy+nz*cy; return [x1, ny*cp-z1*sp, ny*sp+z1*cp];};
+    const shade=n=>{const r=rotn(...n);const d=Math.max(0,r[0]*light[0]+r[1]*light[1]+r[2]*light[2]);return mix(DD,L,Math.min(1,0.25+d*0.85));};
+    const F=[["front",[0,0,1],[[-a,h,a],[a,h,a],[a,-h,a],[-a,-h,a]]],["back",[0,0,-1],[[a,h,-a],[-a,h,-a],[-a,-h,-a],[a,-h,-a]]],
+             ["right",[1,0,0],[[a,h,a],[a,h,-a],[a,-h,-a],[a,-h,a]]],["left",[-1,0,0],[[-a,h,-a],[-a,h,a],[-a,-h,a],[-a,-h,-a]]],["top",[0,1,0],[[-a,h,-a],[a,h,-a],[a,h,a],[-a,h,a]]]];
+    const faces=[];
+    for(const [name,n,pts] of F){const rn=rotn(...n); if(rn[2]<=1e-3) continue; const pp=pts.map(p=>proj(...p)); faces.push([pp.reduce((q,p)=>q+p[2],0)/4,name,n,pp]);}
+    faces.sort((x,y)=>x[0]-y[0]);
+    let o="";
+    const poly=(pp,fill)=>`<polygon points="${pp.map(p=>p[0].toFixed(1)+","+p[1].toFixed(1)).join(" ")}" fill="${fill}" stroke="${fill}" stroke-width=".6" stroke-linejoin="round"/>`;
+    for(const [,name,n,pp] of faces){
+      if(name==="top"&&open>0.02){o+=poly(pp,DD);const k=0.8;o+=poly([proj(-a*k,h,-a*k),proj(a*k,h,-a*k),proj(a*k,h,a*k),proj(-a*k,h,a*k)],GLOW).replace('stroke-width=".6"',`stroke-width=".6" opacity="${Math.min(1,open*1.4).toFixed(2)}"`);continue;}
+      o+=poly(pp,name==="top"?L:shade(n));
+      if(name==="front"){const O=pp[0],U=[pp[1][0]-O[0],pp[1][1]-O[1]],V=[pp[3][0]-O[0],pp[3][1]-O[1]],Wd=100,Hd=100*h/a;
+        o+=`<g transform="matrix(${(U[0]/Wd).toFixed(4)},${(U[1]/Wd).toFixed(4)},${(V[0]/Hd).toFixed(4)},${(V[1]/Hd).toFixed(4)},${O[0].toFixed(2)},${O[1].toFixed(2)})"><text x="50" y="${(Hd*0.5+29).toFixed(1)}" font-family="Outfit,sans-serif" font-size="82" font-weight="800" fill="#fff" text-anchor="middle">P</text></g>`;}
+    }
+    if(open>0.02){const e=ease(open), up=S*0.20*e, ang=-12*e; const t=[proj(-a,h,-a),proj(a,h,-a),proj(a,h,a),proj(-a,h,a)]; const pv=t[3];
+      o+=`<polygon points="${t.map(p=>p[0].toFixed(1)+","+(p[1]-up).toFixed(1)).join(" ")}" fill="${L}" stroke="${L}" stroke-width=".6" stroke-linejoin="round" transform="rotate(${ang.toFixed(2)} ${pv[0].toFixed(1)} ${(pv[1]-up).toFixed(1)})"/>`;}
+    g.innerHTML=o;
+  }
+  const star=(x,y,r,c,op,rot)=>{let p=[];for(let i=0;i<10;i++){const a_=Math.PI/5*i-Math.PI/2+rot,rr=i%2?r*0.45:r;p.push((x+rr*Math.cos(a_)).toFixed(1)+","+(y+rr*Math.sin(a_)).toFixed(1));}return `<polygon points="${p.join(" ")}" fill="${c}" opacity="${op.toFixed(2)}"/>`;};
+  const SEED=[[-0.30,0.55,0.055,GOLD],[0.25,0.75,0.04,GOLD],[0.5,0.42,0.035,ORANGE],[-0.05,0.9,0.045,"#fff"],[-0.55,0.3,0.03,ORANGE],[0.1,0.5,0.028,"#F3ECFF"]];
+  function stars(q,t){ if(q<=0){gs.innerHTML="";return;} let o="";
+    SEED.forEach((s_,i)=>{const dly=i*0.12,qq=Math.max(0,Math.min(1,(q-dly)/Math.max(0.2,1-dly*0.7))); if(qq<=0) return;
+      const ang_=(-90+(i-2.5)*34)*Math.PI/180, dist=S*(0.32+0.10*i)*ease(qq), x=dist*Math.cos(ang_), y=-S*0.33+dist*Math.sin(ang_), fade=1-Math.max(0,qq-0.8)/0.2;
+      o+=star(x,y,S*s_[2]*(1+0.15*Math.sin(t*3+i)),s_[3],Math.min(1,qq*3)*fade,t*1.5+i);});
+    gs.innerHTML=o; }
+  /* シナリオ：待つ → 回る → 開く＋星 → 開いたまま少し揺れる → 閉じる → 待つ（待ち時間と回転方向はランダム） */
+  let t0=performance.now(), plan=makePlan(), running=false, rafId=0;
+  function makePlan(){const wait=2+Math.random()*3, dir=Math.random()<0.5?1:-1, turns=Math.random()<0.25?2:1;
+    return {wait, spin:1.3+0.5*turns, dir, turns, open:0.6, hold:3+Math.random()*2, close:0.5, total:0};}
+  function frame(now){ if(!running) return; const t=(now-t0)/1000; let yaw=-45, open=0, q=0, hop=0, sq=1, flash=0; const P=plan;
+    let u=t;
+    if(u<P.wait){ hop=-3*Math.sin(u*1.6)-3; }                                        /* 待ち：ゆっくり浮く */
+    else if((u-=P.wait)<P.spin){ const k=u/P.spin; yaw=-45-P.dir*360*P.turns*(1-ease(k)); hop=-70*Math.sin(Math.PI*Math.min(1,k*1.1)); sq=1-0.06*Math.sin(Math.PI*k); }  /* 回転：跳ねながら */
+    else if((u-=P.spin)<P.open){ const k=u/P.open; open=back(k); q=Math.max(0,(k-0.2)); sq=1+0.10*Math.sin(Math.PI*Math.min(1,k*2))*(1-k); flash=Math.sin(Math.PI*k); }  /* 開く：着地でぷるん＋光 */
+    else if((u-=P.open)<P.hold){ open=1+0.04*Math.sin(u*2.2); q=Math.min(1,0.8+u*0.4); yaw=-45+3*Math.sin(u*0.9); hop=-4*Math.sin(u*1.4); flash=0.35+0.15*Math.sin(u*2); }
+    else if((u-=P.hold)<P.close){ const k=u/P.close; open=1-ease(k); q=0; flash=0.35*(1-k); sq=1-0.05*Math.sin(Math.PI*k); }
+    else { t0=now; plan=makePlan(); }
+    render(yaw,Math.max(0,Math.min(1.05,open))); stars(q,t);
+    mv.setAttribute('transform',`translate(0,${hop.toFixed(1)}) scale(${(1/Math.sqrt(sq)).toFixed(3)},${sq.toFixed(3)})`);
+    fl.setAttribute('opacity',flash.toFixed(2));
+    const sc=1+hop/180; sh.setAttribute('rx',(120*Math.max(0.6,sc)).toFixed(1)); sh.setAttribute('opacity',(0.25*Math.max(0.4,sc)).toFixed(2));
+    rafId=requestAnimationFrame(frame); }
+  render(-45,0);
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce && 'IntersectionObserver' in window){ new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting&&!running){running=true;t0=performance.now();rafId=requestAnimationFrame(frame);} else if(!e.isIntersecting&&running){running=false;cancelAnimationFrame(rafId);} }),{threshold:.2}).observe(svg); }
+})();
+const cyc=document.querySelector('.cyc');
+if(cyc&&'IntersectionObserver' in window){new IntersectionObserver(es=>es.forEach(e=>cyc.classList.toggle('play',e.isIntersecting)),{threshold:.25}).observe(cyc);}else if(cyc){cyc.classList.add('play');}
+</script>
+</body>
+</html>

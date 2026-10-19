@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ・無料体験 | Pandora Project</title>
+<meta name="description" content="Pandora Project のオンライン家庭教師。お問い合わせと無料体験（50分）のお申し込みフォームです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F7F4EC; --card:#FFFFFF; --ink:#1E2733; --mute:#5B6470; --line:#DDD6C8;
+    --pur:#6B4FC8; --pur-d:#4B3596; --pur-l:#A78BFA; --pur-bg:#EDE7FB;
+    --rose:#CD4F7C; --rose-bg:#F8E3EB; --gold:#F5B83D; --orange:#F08A4B; --ok:#4E9F6B;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--cream);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:28px 16px 72px}
+  header{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+  .brand svg{width:40px;height:40px}
+  .brand b{font-family:Outfit,sans-serif;font-weight:800;letter-spacing:.06em;font-size:15px;line-height:1.1;display:block}
+  .brand small{font-family:Outfit,sans-serif;font-weight:600;letter-spacing:.2em;font-size:10px;color:var(--pur);display:block}
+
+  .hero{position:relative;overflow:hidden;background:var(--pur-d);color:#fff;border-radius:22px;padding:30px 26px 28px;margin-bottom:22px}
+  .hero::before{content:"";position:absolute;right:-70px;top:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.08)}
+  .hero .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700;letter-spacing:.04em}
+  .hero .tag .star{width:10px;height:10px;background:var(--gold);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+  .hero h1{font-size:clamp(22px,4.6vw,30px);line-height:1.35;margin:14px 0 8px;font-weight:700}
+  .hero p{margin:0;color:#EDE7FB;font-size:14px}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px;margin-bottom:16px}
+  .card h2{font-size:14px;letter-spacing:.08em;color:var(--pur);margin:0 0 16px;display:flex;align-items:center;gap:10px}
+  .card h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .field{margin-bottom:18px}
+  label.lbl{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+  .req{display:inline-block;background:var(--rose-bg);color:var(--rose);font-size:10px;font-weight:700;padding:1px 7px;border-radius:999px;margin-left:8px;vertical-align:2px}
+  .opt{display:inline-block;background:var(--pur-bg);color:var(--pur-d);font-size:10px;font-weight:700;padding:1px 7px;border-radius:999px;margin-left:8px;vertical-align:2px}
+  .hint{font-size:12px;color:var(--mute);margin-top:4px}
+  input[type=text],input[type=email],input[type=tel],select,textarea{
+    width:100%;font:inherit;font-size:16px;color:var(--ink);background:#FBFAF6;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;outline:none;transition:border-color .15s,box-shadow .15s}
+  input:focus,select:focus,textarea:focus{border-color:var(--pur);box-shadow:0 0 0 4px var(--pur-bg);background:#fff}
+  textarea{min-height:120px;resize:vertical}
+  select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--pur) 50%),linear-gradient(135deg,var(--pur) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .choice{position:relative}
+  .choice input{position:absolute;inset:0;opacity:0;cursor:pointer}
+  .choice span{display:block;border:1.5px solid var(--line);border-radius:14px;padding:14px 14px;background:#FBFAF6;font-weight:700;font-size:14px;transition:.15s}
+  .choice span small{display:block;font-weight:400;font-size:12px;color:var(--mute);margin-top:2px}
+  .choice input:checked + span{border-color:var(--pur);background:var(--pur-bg);color:var(--pur-d)}
+  .choice input:focus-visible + span{box-shadow:0 0 0 4px var(--pur-bg)}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{position:relative}
+  .chip input{position:absolute;inset:0;opacity:0;cursor:pointer}
+  .chip span{display:inline-block;border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;background:#FBFAF6;transition:.15s}
+  .chip input:checked + span{border-color:var(--pur);background:var(--pur);color:#fff}
+  .chips.bad .chip span{border-color:var(--rose)}
+
+  .note{background:var(--pur-bg);border-radius:14px;padding:14px 16px;font-size:13px;color:var(--pur-d);display:flex;gap:10px;align-items:flex-start}
+  .note b{display:block;margin-bottom:2px}
+
+  button{width:100%;font:inherit;font-size:16px;font-weight:700;color:#fff;background:var(--pur);border:0;border-radius:14px;padding:16px;cursor:pointer;box-shadow:0 8px 20px rgba(107,79,200,.25);transition:transform .1s,background .15s}
+  button:hover{background:var(--pur-d)}
+  button:active{transform:translateY(1px)}
+  button[disabled]{opacity:.6;cursor:default}
+  .legal{font-size:12px;color:var(--mute);text-align:center;margin-top:12px}
+
+  .done{display:none;text-align:center;padding:44px 20px}
+  .done.show{display:block}
+  .done .box{width:120px;height:120px;margin:0 auto 12px}
+  .done h2{font-size:22px;margin:0 0 8px}
+  .done p{color:var(--mute);margin:0}
+  .err{display:none;background:var(--rose-bg);color:var(--rose);border-radius:12px;padding:12px 14px;font-size:13px;margin-bottom:12px}
+  .err.show{display:block}
+
+  footer{margin-top:40px;text-align:center;color:var(--mute);font-size:12px}
+  footer .brand{justify-content:center;margin-bottom:6px}
+  @media (max-width:480px){ .choices{grid-template-columns:1fr} .card{padding:18px 16px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="/">
+      <svg viewBox="-118 -118 236 248" aria-hidden="true"><polygon points="-0.0,-111.3 110.3,-56.1 0.0,-1.0 -110.3,-56.1" fill="#8F78E6"/><polygon points="-110.3,-56.1 0.0,-1.0 0.0,123.3 -110.3,68.1" fill="#6350ac"/><g transform="matrix(1.1031,0.5515,0,1.3510,-110.31,-56.15)"><text x="50" y="75" font-family="Outfit,sans-serif" font-size="82" font-weight="800" fill="#fff" text-anchor="middle">P</text></g><polygon points="0.0,-1.0 110.3,-56.1 110.3,68.1 0.0,123.3" fill="#463686"/></svg>
+      <span><b>PANDORA</b><small>PROJECT</small></span>
+    </a>
+  </header>
+
+  <section class="hero">
+    <span class="tag"><i class="star"></i>無料体験 50分</span>
+    <h1>「勉強しなさい」を、<br>「今日もできた！」に。</h1>
+    <p>お問い合わせも、無料体験のお申し込みも、このフォームからどうぞ。2日以内にご連絡します。</p>
+  </section>
+
+  <form id="f" novalidate>
+    <div class="card">
+      <h2>ご希望</h2>
+      <div class="field">
+        <div class="choices">
+          <label class="choice"><input type="radio" name="kind" value="無料体験を申し込む" checked><span>無料体験を申し込む<small>50分のオンライン授業を一度</small></span></label>
+          <label class="choice"><input type="radio" name="kind" value="まず相談したい"><span>まず相談したい<small>合うかどうか、話を聞きたい</small></span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>保護者の方</h2>
+      <div class="field">
+        <label class="lbl" for="name">お名前<span class="req">必須</span></label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="山田 花子" required>
+      </div>
+      <div class="field">
+        <label class="lbl" for="email">メールアドレス<span class="req">必須</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="example@mail.com" required>
+        <div class="hint">ご連絡はメールが基本です。</div>
+      </div>
+      <div class="field">
+        <label class="lbl" for="tel">電話番号<span class="opt">任意</span></label>
+        <input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="090-0000-0000">
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>お子さんのこと</h2>
+      <div class="field">
+        <label class="lbl" for="grade">学年<span class="req">必須</span></label>
+        <select id="grade" name="grade" required>
+          <option value="">選んでください</option>
+          <optgroup label="小学生">
+            <option>小1</option><option>小2</option><option>小3</option><option>小4</option><option>小5</option><option>小6</option>
+          </optgroup>
+          <optgroup label="中学生">
+            <option>中1</option><option>中2</option><option>中3</option>
+          </optgroup>
+          <option>高校生（ご相談）</option>
+          <option>その他</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="lbl">気になる教科<span class="req">必須</span><span class="opt">複数OK</span></label>
+        <div class="chips" id="subjects">
+          <label class="chip"><input type="checkbox" name="subject" value="算数・数学"><span>算数・数学</span></label>
+          <label class="chip"><input type="checkbox" name="subject" value="国語"><span>国語</span></label>
+          <label class="chip"><input type="checkbox" name="subject" value="英語"><span>英語</span></label>
+          <label class="chip"><input type="checkbox" name="subject" value="理科（ご相談）"><span>理科（ご相談）</span></label>
+          <label class="chip"><input type="checkbox" name="subject" value="社会（ご相談）"><span>社会（ご相談）</span></label>
+          <label class="chip"><input type="checkbox" name="subject" value="まだ決めていない"><span>まだ決めていない</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label class="lbl" for="likes">お子さんの好きなこと<span class="opt">任意</span></label>
+        <input id="likes" name="likes" type="text" placeholder="サッカー、ポケモン、電車、絵をかくこと…">
+        <div class="hint">教材のテーマに使います。思いつくままで大丈夫です。</div>
+      </div>
+      <div class="field">
+        <label class="lbl" for="msg">いま気になっていること<span class="opt">任意</span></label>
+        <textarea id="msg" name="msg" placeholder="例：授業についていけていない気がする／塾が続かなかった／学校をお休みしている／まずどんな感じか知りたい　など、なんでも"></textarea>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>ご都合</h2>
+      <div class="field">
+        <label class="lbl">体験・ご相談のご希望時間帯<span class="opt">複数OK</span></label>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="time" value="平日 午前"><span>平日 午前</span></label>
+          <label class="chip"><input type="checkbox" name="time" value="平日 午後"><span>平日 午後</span></label>
+          <label class="chip"><input type="checkbox" name="time" value="平日 夕方以降"><span>平日 夕方以降</span></label>
+          <label class="chip"><input type="checkbox" name="time" value="土日"><span>土日</span></label>
+          <label class="chip"><input type="checkbox" name="time" value="相談して決めたい"><span>相談して決めたい</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label class="lbl" for="src">知ったきっかけ<span class="opt">任意</span></label>
+        <select id="src" name="src">
+          <option value="">選んでください</option>
+          <option>チラシ</option><option>Web検索</option><option>Instagram・Threads</option><option>知人の紹介</option><option>その他</option>
+        </select>
+      </div>
+      <div class="note">
+        <span>✦</span>
+        <div><b>無料体験について</b>50分のオンライン授業です。ご自宅から、スマホ・タブレット・PCで受けられます。入会金・管理費はなく、体験後の勧誘もしません。</div>
+      </div>
+    </div>
+
+    <div class="err" id="err">未入力の項目があります。赤い「必須」の項目をご確認ください。</div>
+    <button type="submit" id="btn">この内容で送信する</button>
+    <p class="legal">いただいた情報は、ご連絡と授業の準備のためだけに使います。</p>
+  </form>
+
+  <section class="done" id="done">
+    <svg class="box" viewBox="-118 -150 236 280" aria-hidden="true">
+      <polygon points="-110.3,-56.1 0.0,-1.0 0.0,123.3 -110.3,68.1" fill="#6350ac"/>
+      <g transform="matrix(1.1031,0.5515,0,1.3510,-110.31,-56.15)"><text x="50" y="75" font-family="Outfit,sans-serif" font-size="82" font-weight="800" fill="#fff" text-anchor="middle">P</text></g>
+      <polygon points="0.0,-1.0 110.3,-56.1 110.3,68.1 0.0,123.3" fill="#463686"/>
+      <polygon points="-0.0,-111.3 110.3,-56.1 0.0,-1.0 -110.3,-56.1" fill="#2E2066"/>
+      <polygon points="-0.0,-96 88,-52 0.0,-8 -88,-52" fill="#F3ECFF"/>
+      <polygon points="-0.0,-171.3 110.3,-116.1 0.0,-61.0 -110.3,-116.1" fill="#8F78E6" transform="translate(0,-14) rotate(-12 -110 -116)"/>
+      <polygon points="-40,-140 -34,-126 -20,-126 -31,-117 -27,-103 -40,-111 -53,-103 -49,-117 -60,-126 -46,-126" fill="#F5B83D" transform="translate(-30,-30)"/>
+      <polygon points="20,-160 24,-150 35,-150 26,-143 30,-132 20,-139 10,-132 14,-143 5,-150 16,-150" fill="#F5B83D" transform="translate(0,-40) scale(1.3) translate(-5,10)"/>
+      <polygon points="70,-120 73,-113 81,-113 75,-108 77,-100 70,-105 63,-100 65,-108 59,-113 67,-113" fill="#F08A4B" transform="translate(25,-35)"/>
+    </svg>
+    <h2>送信しました。ありがとうございます。</h2>
+    <p>2日以内に、ご記入のメールアドレスへご連絡します。<br>届かない場合は、迷惑メールフォルダもご確認ください。</p>
+  </section>
+
+  <footer>
+    <div class="brand"><span><b>PANDORA</b><small>PROJECT</small></span></div>
+  </footer>
+</div>
+
+<script>
+/* ===== 送信先の設定 =====
+   Googleフォームを1つ作り、各質問の entry.ID をここに入れます（README参照）。
+   GOOGLE_FORM_ACTION が空のままだと、送信内容をメールソフトに渡す方式（mailto）になります。 */
+const GOOGLE_FORM_ACTION = "";   // 例: "https://docs.google.com/forms/d/e/1FAIpQL.../formResponse"
+const ENTRY = {                  // 例: name: "entry.123456789"
+  kind:"", name:"", email:"", tel:"", grade:"", subject:"", likes:"", msg:"", time:"", src:""
+};
+const MAILTO = "info@example.com";   // mailto方式のときの宛先
+
+const f=document.getElementById('f'), btn=document.getElementById('btn'), err=document.getElementById('err'), done=document.getElementById('done');
+document.querySelectorAll('input[name=subject]').forEach(c=>c.addEventListener('change',()=>document.getElementById('subjects').classList.remove('bad')));
+function collect(){
+  const d=new FormData(f), o={};
+  for(const k of ["kind","name","email","tel","grade","likes","msg","src"]) o[k]=(d.get(k)||"").toString().trim();
+  o.subject=d.getAll("subject").join("、"); o.time=d.getAll("time").join("、");
+  return o;
+}
+f.addEventListener('submit', async e=>{
+  e.preventDefault(); err.classList.remove('show');
+  const subOk=f.querySelectorAll('input[name=subject]:checked').length>0;
+  document.getElementById('subjects').classList.toggle('bad',!subOk);
+  if(!f.checkValidity()||!subOk){ err.classList.add('show'); (f.querySelector(':invalid')||f.querySelector('input[name=subject]'))?.focus(); return; }
+  const o=collect(); btn.disabled=true; btn.textContent="送信しています…";
+  try{
+    if(GOOGLE_FORM_ACTION){
+      const body=new URLSearchParams();
+      for(const k in ENTRY){ if(ENTRY[k] && o[k]) body.append(ENTRY[k], o[k]); }
+      await fetch(GOOGLE_FORM_ACTION,{method:"POST",mode:"no-cors",body});
+    }else{
+      const lines=[["ご希望",o.kind],["お名前",o.name],["メール",o.email],["電話",o.tel],["学年",o.grade],["教科",o.subject],["好きなこと",o.likes],["気になっていること",o.msg],["希望時間帯",o.time],["きっかけ",o.src]]
+        .map(([k,v])=>`${k}: ${v}`).join("\n");
+      location.href=`mailto:${MAILTO}?subject=${encodeURIComponent("【Pandora Project】"+o.kind+"（"+o.name+"）")}&body=${encodeURIComponent(lines)}`;
+    }
+    f.style.display="none"; done.classList.add('show'); window.scrollTo({top:0,behavior:"smooth"});
+  }catch(_){
+    btn.disabled=false; btn.textContent="この内容で送信する";
+    err.textContent="送信に失敗しました。時間をおいてもう一度お試しください。"; err.classList.add('show');
+  }
+});
+</script>
+</body>
+</html>
